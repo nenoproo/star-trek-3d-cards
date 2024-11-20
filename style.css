@@ -1,7 +1,6 @@
 :root {
     --card-width: 355px;
     --card-height: 355px;
-    /* --card-width: calc(var(--card-height) / 1.5); */
 }
 
 * {
@@ -16,7 +15,6 @@ body {
     justify-content: center;
     align-items: center;
     background: #191c29;
-
 }
 
 .card {
@@ -37,7 +35,7 @@ body {
     object-fit: cover;
 }
 
-.wrapper {
+.card .wrapper {
     transition: all 0.5s;
     position: absolute;
     width: 100%;
@@ -93,17 +91,7 @@ body {
     transform: translate3d(0%, -50px, 100px);
 }
 
-.title-1 {
-    width: 100%;
-    position: absolute;
-    bottom: -45px;
-    transition: transform 0.5s;
-}
-
-.card:hover .title-1 {
-    transform: translate3d(0%, -50px, 100px);
-}
-
+.title-1,
 .title-2 {
     width: 100%;
     position: absolute;
@@ -111,6 +99,7 @@ body {
     transition: transform 0.5s;
 }
 
+.card:hover .title-1,
 .card:hover .title-2 {
     transform: translate3d(0%, -50px, 100px);
 }
@@ -129,7 +118,7 @@ body {
 }
 
 /* responsive */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 430px) {
 
     body {
         display: block;
@@ -140,5 +129,35 @@ body {
         width: 70%;
         padding: 0;
         margin: 112px auto;
+    }
+
+    .title-1,
+    .title-2 {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        transition: transform 0.5s;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+
+    body {
+        display: block;
+    }
+
+    .card {
+        display: block;
+        width: 70%;
+        padding: 0;
+        margin: 112px auto;
+    }
+
+    .title-1,
+    .title-2 {
+        width: 100%;
+        position: absolute;
+        bottom: 40px;
+        transition: transform 0.5s;
     }
 }

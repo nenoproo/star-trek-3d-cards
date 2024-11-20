@@ -41,7 +41,7 @@ body {
     transition: all 0.5s;
     position: absolute;
     width: 100%;
-    z-index: -1; 
+    z-index: -1;
 }
 
 .card:hover .wrapper {
@@ -126,4 +126,19 @@ body {
 .card:hover .character {
     opacity: 1;
     transform: translate3d(0%, -30%, 100px);
+}
+
+/* responsive */
+@media only screen and (max-width: 480px) {
+
+    body {
+        display: block;
+    }
+
+    .card {
+        display: block;
+        width: 70%;
+        padding: 0;
+        margin: 112px auto;
+    }
 }
